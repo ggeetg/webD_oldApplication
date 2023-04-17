@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NCERT MIS-App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		#linebar{
+			background: #373B44;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			height: 10px;
+			width: 100%;
+		}
+		label{
+			margin-bottom: 0.5px;
+		}
+		body{
+			background: #1f4037;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to bottom, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to bottom, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			min-height: 100vh;
+		}
+	</style>
+</head>
+<body>
+   <body class="main-layout home_page">
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div style="text-align: center; background: #42ad8f; padding: 5px;">
+         	<h2 style="color: #fff; padding-top: 9px;">MIS Web App for PAC Programmes</h2>
+         </div>
+         <div id="linebar"></div>
+         <!-- end header inner -->
+     </header>
+     <div class="container-sm" style="padding-top: 4.5rem;">
+     	<div class="card rounded" style="width: 400px; margin: auto; padding-top: 20px; padding-bottom: 50px;">
+     		<div class="card-body">
+	     		<form action="loginchk.php" method="post" class="needs-validation" novalidate>
+	     			<h2 align="center" class="card-header border-0">Login-form</h2>
+	     			<div class="form-group">
+	     				<label class="card-text">Username:</label>
+		     			<input type="text" name="uname" class="form-control" required>
+		     			<div class="valid-feedback"></div>
+		     			<div class="invalid-feedback">Please fill out this field.</div>
+	     			</div>
+
+	     			<div class="form-group">
+	     				<label class="card-text">Password:</label>
+		     			<input type="password" name="pass1" class="form-control" required>
+		     			<div class="valid-feedback"></div>
+		     			<div class="invalid-feedback">Please fill out this field.</div>
+	     			</div>
+	     			<input type="submit" name="submit" class="btn btn-primary btn-block">
+	     		</form>
+     		</div>
+     	</div>
+     </div>
+</body>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+</html>
